@@ -1,14 +1,21 @@
 import './App.css'
+import Contact from './Contact/Contact'
+import Footer from './Components/Footer'
+import Navbar from './Components/Navbar'
+import Home from './Home/Home'
+import Career from './Career/Career'
+import AboutUs from './AboutUs/AboutUs'
 
 function App() {
 
   return (
     <>
-      <div>
-        <h1 className='text-red-500'>
-          Welcome to Xpert Logistics Solutions!
-        </h1>
-      </div>
+      <Navbar/>
+      {/* <Home/> */}
+      {/* <Contact /> */}
+      {/* <Career/> */}
+      <AboutUs/>
+      <Footer/>
     </>
   )
 }
