@@ -4,7 +4,7 @@ import CareerImg from "../assets/HeroIMG.png"; // replace with your actual image
 
 const HomeCareer = () => {
   return (
-    <section className="w-full bg-white mb-8 text-gray-900">
+    <section className="w-full bg-white mb-8 text-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
         {/* Left Side - Image */}

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import CareerCTA from "./CareerCta";
+import Stars from "../Components/Stars";
 
 const CareerForm = () => {
   return (
@@ -94,6 +95,7 @@ const CareerForm = () => {
         </motion.div>
       </div>
     </section>
+    <Stars/>
     <CareerCTA/>
     </>
     
