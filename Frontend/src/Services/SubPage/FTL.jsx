@@ -1,6 +1,6 @@
 import React from "react";
 import CustomSubServices from "../../Components/CustomSubServices";
-import FTLImg from "../../assets/HeroIMG.png";
+import FTLImg from "../../assets/FtlImg.png";
 
 import {
   FaTruck,

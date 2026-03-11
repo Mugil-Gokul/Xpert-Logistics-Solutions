@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ContactHeroImg from "../assets/HeroIMG.png"; // replace with your actual image path
+import ContactHeroImg from "../assets/ContactHeroImg.png"; // replace with your actual image path
 
 const ContactHero = () => {
   return (

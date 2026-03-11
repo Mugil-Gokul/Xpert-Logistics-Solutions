@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import TruckImage from "../assets/HeroIMG.png"; 
+import TruckImage from "../assets/Img.png"; 
+import CustomButton from "../Components/CustomButton";
+import { Link } from "react-router-dom";
 
 const HomeHero = () => {
   return (
@@ -20,29 +22,15 @@ const HomeHero = () => {
           className="max-w-xl"
         >
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Precision Freight. <br /> Unmatched Expertise.
+            Precision <span className="text-[#620504]">Freight.</span> <br /> Unmatched <span className="text-[#620504]">Expertise.</span> 
           </h1>
           <p className="text-lg md:text-xl mb-4">
             Delivering industry-leading logistics solutions across North America.
             When it has to be there, trust the Xperts.
           </p>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-md flex items-center space-x-2 transition-colors duration-300"
-          >
-            <span>View Services</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </motion.button>
+          <Link to="/services">
+            <CustomButton label="View Services"  />
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import CustomButton from "../Components/CustomButton";
 
 const CareerCTA = () => {
   return (
-    <section className="w-full bg-white py-10 px-6 mb-8">
+    <section className="w-full bg-white py-8 px-6 mb-8">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,9 +19,11 @@ const CareerCTA = () => {
         </h2>
 
         {/* Button */}
-        <button className="bg-red-600 text-white px-6 py-3 rounded-md font-medium flex items-center hover:bg-red-700 transition">
+        {/* <button className="bg-red-600 text-white px-6 py-3 rounded-md font-medium flex items-center hover:bg-red-700 transition">
           Upload your resume 
-        </button>
+        </button> */}
+
+        <CustomButton label="Upload your resume" />
       </motion.div>
     </section>
   );

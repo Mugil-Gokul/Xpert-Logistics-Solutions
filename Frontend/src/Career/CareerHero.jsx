@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import CareerHeroImg from "../assets/HeroIMG.png"; // replace with your actual image path
+import CareerHeroImg from "../assets/CareerHeroImg.png"; // replace with your actual image path
 
 const CareerHero = () => {
   return (

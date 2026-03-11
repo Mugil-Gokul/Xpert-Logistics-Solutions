@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import CareerCTA from "./CareerCta";
 import Stars from "../Components/Stars";
+import CustomButton from "../Components/CustomButton";
 
 const CareerForm = () => {
   return (
@@ -85,12 +86,13 @@ const CareerForm = () => {
               rows="4"
               className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
             ></textarea>
-            <button
+            {/* <button
               type="submit"
               className="bg-red-600 text-white px-6 py-2 rounded-md font-medium hover:bg-red-700 transition flex items-center justify-center"
             >
               Submit
-            </button>
+            </button> */}
+            <CustomButton label="Submit" />
           </form>
         </motion.div>
       </div>

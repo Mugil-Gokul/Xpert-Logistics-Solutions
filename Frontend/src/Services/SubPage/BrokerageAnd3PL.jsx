@@ -1,6 +1,6 @@
 import React from "react";
 import CustomSubServices from "../../Components/CustomSubServices";
-import BrokerageAnd3PLImg from "../../assets/HeroIMG.png";
+import BrokerageAnd3PLImg from "../../assets/B3Img.png";
 
 import {
   FaNetworkWired,

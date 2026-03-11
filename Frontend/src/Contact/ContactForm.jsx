@@ -8,8 +8,9 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
-import TruckImg from "../assets/HeroIMG.png"; // replace with your actual background image
+import TruckImg from "../assets/ContactTruckImg.png"; // replace with your actual background image
 import Stars from "../Components/Stars";
+import CustomButton from "../Components/CustomButton";
 
 const ContactForm = () => {
   return (
@@ -60,12 +61,13 @@ const ContactForm = () => {
                 rows="4"
                 className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
               ></textarea>
-              <button
+              {/* <button
                 type="submit"
                 className="bg-red-600 text-white px-6 py-2 rounded-md font-medium hover:bg-red-700 transition flex items-center justify-center"
               >
                 Submit
-              </button>
+              </button> */}
+              <CustomButton label="Submit" />
             </form>
           </motion.div>
 
@@ -97,11 +99,11 @@ const ContactForm = () => {
               <div className="flex flex-col items-center space-y-6 mt-6">
                 <div className="flex flex-col items-center">
                   <FaMapMarkerAlt className="text-red-500 text-2xl mb-2" />
-                  <span className="text-sm">Chennai, India</span>
+                  <span className="text-sm">Ontario, Canada</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <FaPhoneAlt className="text-red-500 text-2xl mb-2" />
-                  <span className="text-sm">+91 12345 67890</span>
+                  <span className="text-sm"> 1234 5678</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <FaEnvelope className="text-red-500 text-2xl mb-2" />

@@ -27,7 +27,7 @@ const Navbar = () => {
       className={`fixed z-20 w-full border-b shadow-sm transition-colors duration-500 ${
         scrolled
           ? "bg-black text-white border-gray-900"
-          : "bg-white/25 text-gray-800 border-gray-800"
+          : "bg-white/35 text-black border-gray-800"
       }`}
     >
       <div className="container mx-auto grid grid-cols-3 items-center">

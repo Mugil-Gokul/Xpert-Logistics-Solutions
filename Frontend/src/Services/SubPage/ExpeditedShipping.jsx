@@ -1,6 +1,6 @@
 import React from "react";
 import CustomSubServices from "../../Components/CustomSubServices";
-import ExpeditedShippingImg from "../../assets/HeroIMG.png";
+import ExpeditedShippingImg from "../../assets/ExpImg.png";
 
 import {
   FaShippingFast,
