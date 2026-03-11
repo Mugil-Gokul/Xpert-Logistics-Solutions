@@ -27,9 +27,9 @@ const OurTeam = () => {
           Our Management & Expert Team
         </h2>
         <p className="max-w-4xl mx-auto text-base lg:text-lg leading-relaxed mb-4">
-          Our success is driven by the power of collaboration. Uniworld is powered by a 
+          Our success is driven by the power of collaboration. Xpert Logistics is powered by a 
           world-class team of experts who work together seamlessly to solve complex 
-          logistics challenges and deliver innovative solutions – faster.
+          logistics challenges and deliver innovative solutions faster.
         </p>
       </div>
 

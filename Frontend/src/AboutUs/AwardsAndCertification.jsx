@@ -13,12 +13,13 @@ const AwardsAndCertification = () => {
         </div>
 
         {/* Certificates Grid */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {[
-            "certificate here",
-            "certificate here",
-            "certificate here",
-            "certificate here",
+            "CVOR",
+            "USDOT and MC Authority",
+            "ELD Compliance",
+            "Cargo Insurance",
+            "OHSA"
           ].map((text, index) => (
             <motion.div
               key={index}
@@ -26,9 +27,9 @@ const AwardsAndCertification = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-gray-50 rounded-lg shadow-md flex items-center justify-center h-48"
+              className="bg-[#620504] border rounded-lg shadow-md flex items-center justify-center h-48"
             >
-              <p className="text-gray-500 font-medium">{text}</p>
+              <p className="text-white font-medium">{text}</p>
             </motion.div>
           ))}
         </div>

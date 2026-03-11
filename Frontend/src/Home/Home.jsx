@@ -15,17 +15,40 @@ const Home = () => {
         <HomeHero />
 
         {/* Badge Section */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-full max-w-6xl z-10">
+        <div
+          className="
+          relative 
+          md:absolute 
+          md:bottom-0 
+          md:left-1/2 
+          md:-translate-x-1/2 
+          md:translate-y-1/2 
+          w-full 
+          max-w-6xl 
+          mx-auto 
+          px-4 
+          md:px-0 
+          mt-6 
+          md:mt-0 
+          z-10
+        "
+        >
           <HeroBadges />
         </div>
       </div>
-      <HomeAboutUs />
-      <WhatWeOffer />
-      <HomeChooseUs/>
-      <HomeTestimonials/>
-      <HomeCareer/>
+
+      {/* Sections */}
+      <div className="">
+        <HomeAboutUs />
+        <WhatWeOffer />
+        <HomeChooseUs />
+        <HomeTestimonials />
+        <HomeCareer />
+      </div>
     </>
   );
 };
 
 export default Home;
+
+

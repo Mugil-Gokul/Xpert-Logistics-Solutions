@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const CustomButton = ({ label = "View Services", onClick }) => {
   return (
-    <motion.button
+    <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
@@ -14,7 +14,7 @@ const CustomButton = ({ label = "View Services", onClick }) => {
       <span className="flex items-center justify-center w-8 h-8 bg-white text-black rounded-full">
         <ArrowRight size={18} />
       </span>
-    </motion.button>
+    </motion.div>
   );
 };
 
