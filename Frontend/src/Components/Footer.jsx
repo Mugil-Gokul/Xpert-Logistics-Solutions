@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import LogoImg from "../assets/logo.png";
+import LogoImg from "../assets/Logo.png";
 
 const Footer = () => {
   return (
