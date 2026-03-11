@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import CareerCTA from "./CareerCta";
 import Stars from "../Components/Stars";
 import CustomButton from "../Components/CustomButton";
+import CareerCTA from "./CareerCTA";
 
 const CareerForm = () => {
 
