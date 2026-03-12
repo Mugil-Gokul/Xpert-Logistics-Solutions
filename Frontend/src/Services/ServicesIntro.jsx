@@ -5,15 +5,16 @@ import Stars from "../Components/Stars";
 const ServicesIntro = () => {
   return (
     <>
-      <section className="w-full py-8 px-6 lg:px-20 text-black">
+      <section className="w-full py-6 sm:py-12 lg:py-8 px-4 sm:px-6 lg:px-20 text-black">
         <div className="max-w-7xl mx-auto text-center">
+          
           {/* Heading */}
           <motion.h2
             initial={{ opacity: 0, y: -40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-3xl lg:text-4xl font-bold mb-10"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 lg:mb-10"
           >
             Xpert Logistics Solutions – Canada’s Trusted Global Partner
           </motion.h2>
@@ -24,7 +25,7 @@ const ServicesIntro = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="mx-auto text-base lg:text-lg leading-relaxed text-gray-700 mt-6"
+            className="mx-auto max-w-3xl text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700"
           >
             Xpert Logistics Solutions provides a comprehensive range of
             transportation and supply chain services for businesses across
@@ -37,8 +38,10 @@ const ServicesIntro = () => {
             account support, and the reliability that GTA businesses have come
             to expect from Xpert.
           </motion.p>
+
         </div>
       </section>
+
       <Stars />
     </>
   );

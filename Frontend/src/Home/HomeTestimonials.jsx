@@ -50,7 +50,7 @@ const HomeTestimonials = () => {
   const startIndex = page * ITEMS_PER_PAGE;
   const currentTestimonials = testimonials.slice(
     startIndex,
-    startIndex + ITEMS_PER_PAGE,
+    startIndex + ITEMS_PER_PAGE
   );
 
   const handleNext = () => {
@@ -67,13 +67,18 @@ const HomeTestimonials = () => {
 
   return (
     <>
-      <section className="w-full bg-gradient-to-r from-[#3b0a0a] via-[#5c0a0a] to-[#3b0a0a] py-10 px-6 lg:px-20 text-white">
+      <section className="w-full bg-gradient-to-r from-[#3b0a0a] via-[#5c0a0a] to-[#3b0a0a] py-12 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-20 text-white">
         <div className="max-w-7xl mx-auto">
+
           {/* Heading */}
-          <div className="flex justify-between items-center mb-12">
+          <div className="flex md:flex-row md:justify-between md:items-center gap-6 mb-10 sm:mb-12">
+
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold">TESTIMONIALS</h2>
-              <p className="text-gray-300 mt-4 max-w-2xl">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+                TESTIMONIALS
+              </h2>
+
+              <p className="text-gray-300 mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base">
                 Consistently exceeding expectations, the focus on innovation,
                 efficiency and customer-centric solutions is reflected in the
                 voices of our satisfied customers.
@@ -81,11 +86,11 @@ const HomeTestimonials = () => {
             </div>
 
             {/* Navigation Arrows */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 self-start md:self-auto my-auto">
               <button
                 onClick={handlePrev}
                 disabled={page === 0}
-                className={`w-10 h-10 flex items-center justify-center rounded-full ${
+                className={`w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full ${
                   page === 0
                     ? "bg-gray-400 cursor-not-allowed"
                     : "bg-white text-red-700 hover:bg-red-600 hover:text-white transition"
@@ -93,10 +98,11 @@ const HomeTestimonials = () => {
               >
                 <FaArrowLeft />
               </button>
+
               <button
                 onClick={handleNext}
                 disabled={startIndex + ITEMS_PER_PAGE >= testimonials.length}
-                className={`w-10 h-10 flex items-center justify-center rounded-full ${
+                className={`w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full ${
                   startIndex + ITEMS_PER_PAGE >= testimonials.length
                     ? "bg-gray-400 cursor-not-allowed"
                     : "bg-white text-red-700 hover:bg-red-600 hover:text-white transition"
@@ -105,40 +111,45 @@ const HomeTestimonials = () => {
                 <FaArrowRight />
               </button>
             </div>
+
           </div>
 
           {/* Testimonials Grid */}
           <AnimatePresence mode="wait">
             <motion.div
               key={page}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
+              exit={{ opacity: 0, y: -40 }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
             >
               {currentTestimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-white text-gray-800 rounded-lg shadow-lg p-6"
+                  // whileHover={{ scale: 1.05 }}
+                  className="bg-white text-gray-800 rounded-lg shadow-lg p-5 sm:p-6"
                 >
-                  <p className="text-sm leading-relaxed mb-4">
+                  <p className="text-sm sm:text-base leading-relaxed mb-4">
                     "{testimonial.feedback}"
                   </p>
-                  <h4 className="text-lg font-semibold text-red-700">
+
+                  <h4 className="text-base sm:text-lg font-semibold text-red-700">
                     {testimonial.name}
                   </h4>
-                  <span className="text-gray-500 text-sm">
+
+                  <span className="text-gray-500 text-xs sm:text-sm">
                     {testimonial.role}
                   </span>
                 </motion.div>
               ))}
             </motion.div>
           </AnimatePresence>
+
         </div>
       </section>
-      <Stars/>
+
+      <Stars />
     </>
   );
 };

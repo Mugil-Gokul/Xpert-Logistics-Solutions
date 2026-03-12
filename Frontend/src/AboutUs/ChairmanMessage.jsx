@@ -6,26 +6,31 @@ import Stars from "../Components/Stars";
 const ChairmanMessage = () => {
   return (
     <>
-      <section className="w-full bg-white py-8 px-6 lg:px-20">
-        <h2 className="text-3xl lg:text-4xl font-bold text-[#620504] border-b-2 border-[#620504] inline-block mb-16">
+      <section className="w-full bg-white py-6 sm:py-12 lg:py-8 px-4 sm:px-6 lg:px-20 overflow-hidden">
+
+        {/* Heading */}
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#620504] border-b-2 border-[#620504] inline-block mb-10 sm:mb-12 lg:mb-16">
           Chairman's Message
         </h2>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+
           {/* Left Side - Chairman Image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center text-center lg:text-left"
           >
             <img
               src={ChairmanImg}
               alt="Chairman Portrait"
-              className="rounded-lg shadow-lg w-full max-w-sm object-cover"
+              className="rounded-lg shadow-lg w-full max-w-[260px] sm:max-w-sm object-cover"
             />
-            {/* Name Stamp */}
-            <p className="mt-4 text-lg font-semibold text-gray-800 border-t-2 border-[#620504] pt-2">
+
+            {/* Name */}
+            <p className="mt-4 text-base sm:text-lg font-semibold text-gray-800 border-t-2 border-[#620504] pt-2">
               Mr. XYZ, Chairman
             </p>
           </motion.div>
@@ -38,8 +43,8 @@ const ChairmanMessage = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="bg-gray-50 rounded-lg shadow-md p-6">
-              <p className="text-gray-700 leading-relaxed text-base lg:text-md">
+            <div className="bg-gray-50 rounded-lg shadow-md p-5 sm:p-6">
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base lg:text-md">
                 <span className="font-semibold">Dear Friends,</span>
                 <br />
                 <br />
@@ -58,16 +63,19 @@ const ChairmanMessage = () => {
                 members who have joined us as a part of our vast TCI Parivar.
                 <br />
                 <br />
-                <p className="font-semibold">
-                  Best wishes,
-                  <br />
-                  Mr. XYZ, Chairman
-                </p>
+              </p>
+
+              <p className="font-semibold text-gray-800">
+                Best wishes,
+                <br />
+                Mr. XYZ, Chairman
               </p>
             </div>
           </motion.div>
+
         </div>
       </section>
+
       <Stars />
     </>
   );

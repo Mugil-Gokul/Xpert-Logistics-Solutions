@@ -5,7 +5,7 @@ import Stars from "../Components/Stars";
 
 const HomeAboutUs = () => {
   return (
-    <section className="relative w-full bg-white py-16 px-6 lg:px-20">
+    <section className="relative w-full bg-white py-16 px-6 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         {/* Left Side - Image */}
         <motion.div

@@ -55,8 +55,8 @@ ${formData.message}
 
   return (
     <>
-      <section className="w-full bg-white py-8 px-6 lg:px-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+      <section className="w-full bg-white py-6 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-stretch">
 
           {/* Left Side - Contact Form */}
 
@@ -65,15 +65,15 @@ ${formData.message}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white p-8"
+            className="bg-white p-4 sm:p-6 lg:p-8"
           >
-            <h2 className="text-6xl font-semibold text-[#620504] mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#620504] mb-6 sm:mb-8">
               Get In Touch With Us
             </h2>
 
             <form className="space-y-4" onSubmit={handleSubmit}>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                 <input
                   name="firstName"
@@ -82,7 +82,7 @@ ${formData.message}
                   type="text"
                   placeholder="First Name"
                   required
-                  className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
                 />
 
                 <input
@@ -92,7 +92,7 @@ ${formData.message}
                   type="text"
                   placeholder="Last Name"
                   required
-                  className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
                 />
 
               </div>
@@ -104,7 +104,7 @@ ${formData.message}
                 type="email"
                 placeholder="Email"
                 required
-                className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
               />
 
               <input
@@ -113,7 +113,7 @@ ${formData.message}
                 onChange={handleChange}
                 type="tel"
                 placeholder="Phone Number"
-                className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
               />
 
               <input
@@ -123,7 +123,7 @@ ${formData.message}
                 type="text"
                 placeholder="Subject"
                 required
-                className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
               />
 
               <textarea
@@ -133,7 +133,7 @@ ${formData.message}
                 rows="4"
                 placeholder="Message"
                 required
-                className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
               ></textarea>
 
               <button type="submit">
@@ -150,10 +150,8 @@ ${formData.message}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative rounded-lg overflow-hidden flex items-center justify-center"
+            className="relative rounded-lg overflow-hidden flex items-center justify-center min-h-[320px] sm:min-h-[400px]"
           >
-
-            {/* Background Image */}
 
             <img
               src={TruckImg}
@@ -161,35 +159,31 @@ ${formData.message}
               className="absolute inset-0 w-full h-full object-cover"
             />
 
-            {/* Overlay */}
-
             <div className="absolute inset-0 bg-black/70"></div>
 
-            {/* Content */}
+            <div className="relative z-10 text-center text-white p-6 sm:p-8 space-y-6">
 
-            <div className="relative z-10 text-center text-white p-8 space-y-6">
-
-              <h2 className="text-2xl lg:text-3xl font-bold">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold">
                 Need A Trusted Logistics Partner?
               </h2>
 
-              <p className="text-lg">Connect with Us Today</p>
+              <p className="text-sm sm:text-lg">Connect with Us Today</p>
 
               <div className="flex flex-col items-center space-y-6 mt-6">
 
                 <div className="flex flex-col items-center">
-                  <FaMapMarkerAlt className="text-red-500 text-2xl mb-2" />
-                  <span className="text-sm">Ontario, Canada</span>
+                  <FaMapMarkerAlt className="text-red-500 text-xl sm:text-2xl mb-2" />
+                  <span className="text-xs sm:text-sm">Ontario, Canada</span>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <FaPhoneAlt className="text-red-500 text-2xl mb-2" />
-                  <span className="text-sm">1234 5678</span>
+                  <FaPhoneAlt className="text-red-500 text-xl sm:text-2xl mb-2" />
+                  <span className="text-xs sm:text-sm">1234 5678</span>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <FaEnvelope className="text-red-500 text-2xl mb-2" />
-                  <span className="text-sm">info@xpertlogistics.com</span>
+                  <FaEnvelope className="text-red-500 text-xl sm:text-2xl mb-2" />
+                  <span className="text-xs sm:text-sm">info@xpertlogistics.com</span>
                 </div>
 
               </div>
@@ -198,24 +192,15 @@ ${formData.message}
 
               <div className="flex justify-center space-x-4 mt-8">
 
-                <a
-                  href="#"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition"
-                >
+                <a className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition">
                   <FaFacebookF />
                 </a>
 
-                <a
-                  href="#"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition"
-                >
+                <a className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition">
                   <FaTwitter />
                 </a>
 
-                <a
-                  href="#"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition"
-                >
+                <a className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition">
                   <FaLinkedinIn />
                 </a>
 

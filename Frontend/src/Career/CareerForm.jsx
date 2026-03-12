@@ -5,7 +5,6 @@ import CustomButton from "../Components/CustomButton";
 import CareerCTA from "./CareerCTA";
 
 const CareerForm = () => {
-
   const [resumeName, setResumeName] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -21,8 +20,8 @@ const CareerForm = () => {
 
   return (
     <>
-      <section className="w-full bg-white py-16 px-6 lg:px-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <section className="w-full bg-white py-6 px-4 sm:px-6 lg:px-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
           {/* LEFT SECTION */}
 
@@ -31,13 +30,13 @@ const CareerForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
-            <h2 className="text-6xl font-semibold text-[#620504] mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#620504]">
               Careers
             </h2>
 
-            <p className="text-gray-700 leading-relaxed text-base lg:text-lg">
+            <p className="text-gray-700 leading-relaxed text-sm sm:text-base lg:text-lg">
               A place for people to be their best. At EasyWay Logistics, we truly
               believe in our people – as skilled employees, supportive team
               members and uniquely talented individuals. While dedicated to
@@ -54,10 +53,9 @@ const CareerForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white px-8"
+            className="bg-white px-2 sm:px-4 lg:px-8"
           >
-
-            <h2 className="text-6xl font-semibold text-[#620504] mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#620504] mb-6 sm:mb-8">
               Submit Resume Online
             </h2>
 
@@ -68,7 +66,6 @@ const CareerForm = () => {
               onSubmit={handleSubmit}
               className="space-y-4"
             >
-
               {/* Hidden Config */}
 
               <input type="hidden" name="_subject" value="New Career Application" />
@@ -77,14 +74,13 @@ const CareerForm = () => {
 
               {/* First Row */}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   name="firstName"
                   type="text"
                   required
                   placeholder="First Name"
-                  className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
                 />
 
                 <input
@@ -92,21 +88,19 @@ const CareerForm = () => {
                   type="tel"
                   required
                   placeholder="Phone"
-                  className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
                 />
-
               </div>
 
               {/* Second Row */}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   name="email"
                   type="email"
                   required
                   placeholder="Email Address"
-                  className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
                 />
 
                 <input
@@ -114,9 +108,8 @@ const CareerForm = () => {
                   type="text"
                   required
                   placeholder="Position"
-                  className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
                 />
-
               </div>
 
               {/* Job Type */}
@@ -124,7 +117,7 @@ const CareerForm = () => {
               <select
                 name="jobType"
                 required
-                className="w-full border border-red-500 rounded-md px-4 py-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base text-gray-600 focus:outline-none focus:ring-2 focus:ring-red-600"
               >
                 <option value="">— Please choose an option —</option>
                 <option>Full-Time</option>
@@ -134,22 +127,20 @@ const CareerForm = () => {
 
               {/* Resume Upload */}
 
-              <div className="border-2 border-dashed border-red-400 rounded-lg p-6 text-center hover:bg-red-50 transition">
-
+              <div className="border-2 border-dashed border-red-400 rounded-lg p-4 sm:p-6 text-center hover:bg-red-50 transition">
                 <input
                   type="file"
                   name="resume"
                   required
                   onChange={handleFileChange}
-                  className="w-full cursor-pointer"
+                  className="w-full cursor-pointer text-sm"
                 />
 
                 {resumeName && (
-                  <p className="text-sm text-green-600 mt-2">
+                  <p className="text-xs sm:text-sm text-green-600 mt-2">
                     Uploaded: {resumeName}
                   </p>
                 )}
-
               </div>
 
               {/* Message */}
@@ -158,7 +149,7 @@ const CareerForm = () => {
                 name="message"
                 rows="4"
                 placeholder="Message"
-                className="w-full border border-red-500 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
               ></textarea>
 
               {/* Submit */}
@@ -168,9 +159,7 @@ const CareerForm = () => {
                   <CustomButton label={loading ? "Submitting..." : "Submit"} />
                 </button>
               </div>
-
             </form>
-
           </motion.div>
         </div>
       </section>

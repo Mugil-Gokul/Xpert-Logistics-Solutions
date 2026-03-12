@@ -71,7 +71,7 @@ const Navbar = () => {
 
         {/* Hamburger Button */}
         <div className="lg:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl mr-5">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl pr-5">
             {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className={`lg:hidden flex flex-col items-center space-y-6 py-8 ${
-            scrolled ? "bg-black text-white" : "bg-white"
+            scrolled ? "bg-[#620504] text-white" : "bg-white"
           }`}
         >
           <Link onClick={() => setMenuOpen(false)} to="/about">

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import CareerImg from "../assets/Support.png";
 import CustomButton from "../Components/CustomButton";
+import { Link } from "react-router-dom";
 
 const HomeCareer = () => {
   return (
@@ -29,7 +30,7 @@ const HomeCareer = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="flex flex-col space-y-5 text-center lg:text-left items-center lg:items-start"
+          className="flex flex-col space-y-5 text-center lg:text-left items-center lg:items-start pt-10 lg:pt-0"
         >
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
             <span className="text-[#620504]">Join Our</span> Solution Minds
@@ -39,9 +40,9 @@ const HomeCareer = () => {
             Be a part of the workforce that redefines logistics.
           </p>
 
-          <div>
+          <Link to="/career" className="inline-block">
             <CustomButton label="Join Us" />
-          </div>
+          </Link>
         </motion.div>
 
       </div>
