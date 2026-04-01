@@ -165,7 +165,7 @@ ${formData.message}
               <div className="flex flex-col items-center space-y-6 mt-6">
                 <div className="flex flex-col items-center">
                   <FaMapMarkerAlt className="text-red-500 text-xl sm:text-2xl mb-2" />{" "}
-                  Office Address :
+                  <span className="underline underline-offset-4 decoration-red-500 mb-2">Office Address :</span>
                   <span className="text-xs sm:text-sm">
                     1055 Canadian Plc Unit:104A,Mississauga ON 2nd floor.
                   </span>
@@ -173,7 +173,7 @@ ${formData.message}
 
                 <div className="flex flex-col items-center">
                   <FaTruck className="text-red-500 text-xl sm:text-2xl mb-2" />{" "}
-                  Yard Address :
+                  <span className="underline underline-offset-4 decoration-red-500 mb-2">Yard Address :</span>
                   <span className="text-xs sm:text-sm">
                     1075 Canadian Plc, Mississauga ON and 30 Bethridge Road
                     Etobicoke ON(CTPAT approved yard).

@@ -18,7 +18,7 @@ const Footer = () => {
           className="bg-gradient-to-r from-red-100 via-white to-red-100 rounded-2xl py-6 px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm text-gray-900 shadow-md text-center sm:text-left"
         >
           <div>
-            <h4 className="font-semibold mb-1">Registered Office:</h4>
+            <h4 className="font-semibold mb-1">Office Address:</h4>
             <p className="text-gray-700">1055 Canadian Plc Unit:104A,Mississauga ON 2nd floor.</p>
           </div>
 
