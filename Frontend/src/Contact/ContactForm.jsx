@@ -7,13 +7,13 @@ import {
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
+  FaTruck,
 } from "react-icons/fa";
 import TruckImg from "../assets/ContactTruckImg.png";
 import Stars from "../Components/Stars";
 import CustomButton from "../Components/CustomButton";
 
 const ContactForm = () => {
-
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -47,7 +47,7 @@ ${formData.message}
     `;
 
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@xpertlogistics.com&su=${encodeURIComponent(
-      subject
+      subject,
     )}&body=${encodeURIComponent(body)}`;
 
     window.open(gmailUrl, "_blank");
@@ -57,7 +57,6 @@ ${formData.message}
     <>
       <section className="w-full bg-white py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-stretch">
-
           {/* Left Side - Contact Form */}
 
           <motion.div
@@ -72,9 +71,7 @@ ${formData.message}
             </h2>
 
             <form className="space-y-4" onSubmit={handleSubmit}>
-
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
                 <input
                   name="firstName"
                   value={formData.firstName}
@@ -94,7 +91,6 @@ ${formData.message}
                   required
                   className="w-full border border-red-500 rounded-md px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600"
                 />
-
               </div>
 
               <input
@@ -139,7 +135,6 @@ ${formData.message}
               <button type="submit">
                 <CustomButton label="Submit" />
               </button>
-
             </form>
           </motion.div>
 
@@ -152,7 +147,6 @@ ${formData.message}
             viewport={{ once: true }}
             className="relative rounded-lg overflow-hidden flex items-center justify-center min-h-[320px] sm:min-h-[400px]"
           >
-
             <img
               src={TruckImg}
               alt="Logistics Background"
@@ -162,7 +156,6 @@ ${formData.message}
             <div className="absolute inset-0 bg-black/70"></div>
 
             <div className="relative z-10 text-center text-white p-6 sm:p-8 space-y-6">
-
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold">
                 Need A Trusted Logistics Partner?
               </h2>
@@ -170,10 +163,21 @@ ${formData.message}
               <p className="text-sm sm:text-lg">Connect with Us Today</p>
 
               <div className="flex flex-col items-center space-y-6 mt-6">
+                <div className="flex flex-col items-center">
+                  <FaMapMarkerAlt className="text-red-500 text-xl sm:text-2xl mb-2" />{" "}
+                  Office Address :
+                  <span className="text-xs sm:text-sm">
+                    1055 Canadian Plc Unit:104A,Mississauga ON 2nd floor.
+                  </span>
+                </div>
 
                 <div className="flex flex-col items-center">
-                  <FaMapMarkerAlt className="text-red-500 text-xl sm:text-2xl mb-2" />
-                  <span className="text-xs sm:text-sm">Ontario, Canada</span>
+                  <FaTruck className="text-red-500 text-xl sm:text-2xl mb-2" />{" "}
+                  Yard Address :
+                  <span className="text-xs sm:text-sm">
+                    1075 Canadian Plc, Mississauga ON and 30 Bethridge Road
+                    Etobicoke ON(CTPAT approved yard).
+                  </span>
                 </div>
 
                 <div className="flex flex-col items-center">
@@ -183,15 +187,15 @@ ${formData.message}
 
                 <div className="flex flex-col items-center">
                   <FaEnvelope className="text-red-500 text-xl sm:text-2xl mb-2" />
-                  <span className="text-xs sm:text-sm">info@xpertlogistics.com</span>
+                  <span className="text-xs sm:text-sm">
+                    info@xpertlogistics.com
+                  </span>
                 </div>
-
               </div>
 
               {/* Social Icons */}
 
               <div className="flex justify-center space-x-4 mt-8">
-
                 <a className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition">
                   <FaFacebookF />
                 </a>
@@ -203,13 +207,9 @@ ${formData.message}
                 <a className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition">
                   <FaLinkedinIn />
                 </a>
-
               </div>
-
             </div>
-
           </motion.div>
-
         </div>
       </section>
 

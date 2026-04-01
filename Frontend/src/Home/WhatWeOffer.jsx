@@ -69,7 +69,7 @@ const WhatWeOffer = () => {
 
   return (
     <>
-      <section className="w-full bg-gradient-to-r from-black via-[#3b0a0a] to-black py-16 px-6 md:px-10 lg:px-20 text-white">
+      <section className="w-full bg-gradient-to-r from-black via-[#3b0a0a] to-black py-16 px-6 md:px-10 text-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10 items-start">
           {/* Left Panel */}
           <motion.div
@@ -82,11 +82,11 @@ const WhatWeOffer = () => {
             <h2 className="text-2xl md:text-3xl font-bold">WHAT WE OFFER</h2>
 
             <p className="text-gray-300 leading-relaxed text-sm md:text-base">
-              Enhancing supply chain efficiency with tailored logistics
-              solutions that minimize costs and ensure timely deliveries. With a
-              nationwide network, advanced technology and a customer-centric
-              approach, every service is customized to meet diverse industry
-              requirements.
+              Enhancing supply chain efficiency with tailored logistics solutions that 
+              minimize costs and ensure timely deliveries, supported by a nationwide network, 
+              advanced technology, and a customer-centric approach—every service is customized 
+              to meet diverse industry requirements. We are CTPAT certified, Bonded, and FAST-approved (in process), 
+              ensuring secure and efficient cross-border operations.
             </p>
 
             <Link to="/contact" className="inline-block">

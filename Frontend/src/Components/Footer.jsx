@@ -19,12 +19,12 @@ const Footer = () => {
         >
           <div>
             <h4 className="font-semibold mb-1">Registered Office:</h4>
-            <p className="text-gray-700">Address Here</p>
+            <p className="text-gray-700">1055 Canadian Plc Unit:104A,Mississauga ON 2nd floor.</p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-1">Corporate Office:</h4>
-            <p className="text-gray-700">Address Here</p>
+            <h4 className="font-semibold mb-1">Yard Address:</h4>
+            <p className="text-gray-700">1075 Canadian Plc, Mississauga ON and 30 Bethridge Road Etobicoke ON(CTPAT approved yard).</p>
           </div>
 
           <div>

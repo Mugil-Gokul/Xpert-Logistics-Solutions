@@ -2,6 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import AboutImg from "../assets/HomeAboutUs.png";
 import Stars from "../Components/Stars";
+import {
+  FaTruck,
+  FaClock,
+  FaUsers,
+  FaGlobe,
+  FaLeaf,
+  FaBullseye,
+} from "react-icons/fa";
 
 const HomeAboutUs = () => {
   return (
@@ -34,28 +42,79 @@ const HomeAboutUs = () => {
             About Us
           </h2>
 
-          <p className="text-black leading-relaxed text-sm sm:text-base md:text-lg">
-            At{" "}
-            <span className="font-semibold text-[#620504]">
-              Xpert Logistics Solutions
-            </span>
-            , we pride ourselves on providing top-notch logistics services
-            throughout North America. Our commitment to excellence ensures that
-            your shipments arrive on time, every time, by leveraging a robust
-            network that spans from the busy ports of the coasts to the rural
-            heartlands. With a team of dedicated professionals and innovative
-            technology, we are your trusted partner in navigating the
-            complexities of modern supply chains, offering real-time visibility
-            and precision-driven route optimization that minimizes delays. We
-            understand that in today’s fast-paced market, a shipment is more
-            than just cargo—it is a promise made to your customers. By
-            integrating seamless cross-border expertise with a versatile fleet
-            capable of handling everything from specialized freight to standard
-            hauls, we provide the stability your operations require. Let us
-            handle the intricate details of coordination, compliance, and
-            distribution so you can focus on what matters most—growing your
-            business and reaching new heights of success.
-          </p>
+          <div className="space-y-4 text-left">
+            <p className="text-black leading-relaxed text-sm sm:text-base md:text-md">
+              At{" "}
+              <span className="font-semibold text-[#620504]">
+                Xpert Logistics Solutions
+              </span>
+              , we pride ourselves on providing{" "}
+              <span className="font-semibold">
+                top-notch logistics services
+              </span>{" "}
+              throughout North America. Our commitment to{" "}
+              <span className="font-semibold">excellence</span> ensures that
+              your shipments arrive{" "}
+              <span className="font-semibold">on time, every time</span>, by
+              leveraging a robust network that spans from busy ports to rural
+              heartlands.
+              <br />
+              <br />
+              With a team of{" "}
+              <span className="font-semibold">
+                dedicated professionals
+              </span> and{" "}
+              <span className="font-semibold">innovative technology</span>, we
+              provide{" "}
+              <span className="font-semibold">real-time visibility</span> and{" "}
+              <span className="font-semibold">
+                precision-driven route optimization
+              </span>{" "}
+              to minimize delays. We understand that a shipment is more than
+              cargo — it is{" "}
+              <span className="font-semibold">a promise to your customers</span>
+              .
+              <br />
+              <br />
+              We also specialize in{" "}
+              <span className="font-semibold">cross-border logistics</span> with
+              a versatile fleet capable of handling{" "}
+              <span className="font-semibold">
+                specialized freight and standard hauls
+              </span>
+              . Our expertise ensures smooth coordination, compliance, and
+              distribution so you can focus on{" "}
+              <span className="font-semibold">growing your business</span>.
+              <br />
+              <br />
+              We are also committed to{" "}
+              <span className="font-semibold text-[#620504]">
+                environmental responsibility
+              </span>
+              . As a{" "}
+              <span className="font-semibold">
+                proud member of the SmartWay Transport Partnership
+              </span>
+              , we actively work on{" "}
+              <span className="font-semibold">reducing emissions</span>,{" "}
+              <span className="font-semibold">improving fuel efficiency</span>,
+              and adopting{" "}
+              <span className="font-semibold">
+                sustainable transportation practices
+              </span>{" "}
+              as part of our long-term growth strategy.
+              <br />
+              <br />
+              Our goal is simple —{" "}
+              <span className="font-semibold text-[#620504]">
+                dependable transportation, strong communication, and operational
+                excellence
+              </span>{" "}
+              on every load.
+            </p>
+
+            {/* </div> */}
+          </div>
         </motion.div>
       </div>
 
