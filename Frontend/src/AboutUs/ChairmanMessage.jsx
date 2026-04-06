@@ -24,9 +24,9 @@ const ChairmanMessage = () => {
             className="flex flex-col items-center text-center lg:text-left"
           >
             <img
-              src={ChairmanImg}
+              // src={ChairmanImg}
               alt="Chairman Portrait"
-              className="rounded-lg shadow-lg w-full max-w-[260px] sm:max-w-sm object-cover"
+              className="rounded-lg sm:h-0 md:h-[400px] shadow-lg w-full max-w-[260px] sm:max-w-sm object-cover"
             />
 
             {/* Name */}
