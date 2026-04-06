@@ -13,9 +13,9 @@ const ChairmanMessage = () => {
           Chairman's Message
         </h2>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="max-w-7xl mx-auto gap-8 lg:gap-12 items-start">
 
-          {/* Left Side - Chairman Image */}
+          {/* Left Side - Chairman Image
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -24,16 +24,16 @@ const ChairmanMessage = () => {
             className="flex flex-col items-center text-center lg:text-left"
           >
             <img
-              // src={ChairmanImg}
+              src={ChairmanImg}
               alt="Chairman Portrait"
               className="rounded-lg sm:h-0 md:h-[400px] shadow-lg w-full max-w-[260px] sm:max-w-sm object-cover"
             />
 
-            {/* Name */}
+            Name
             <p className="mt-4 text-base sm:text-lg font-semibold text-gray-800 border-t-2 border-[#620504] pt-2">
               Mr. XYZ, Chairman
             </p>
-          </motion.div>
+          </motion.div> */}
 
           {/* Right Side - Message */}
           <motion.div
@@ -49,7 +49,7 @@ const ChairmanMessage = () => {
                 <br />
                 <br />
                 In our journey together, with your support and contributions,
-                TCI has continued to grow & evolve. Along with increased
+                Xpert Logistics has continued to grow & evolve. Along with increased
                 commitment to nurturing environment, society and nation
                 building, we are strengthening our roots beyond the Indian
                 borders. Through these times, we have grown and learned new
@@ -60,7 +60,7 @@ const ChairmanMessage = () => {
                 employees, customers, and partners. Your dedication and support
                 has helped us to grow with agility, resilience and adaptability.
                 I also want to express my gratitude and welcome all the new
-                members who have joined us as a part of our vast TCI Parivar.
+                members who have joined us as a part of our vast Xpert Logistics.
                 <br />
                 <br />
               </p>
