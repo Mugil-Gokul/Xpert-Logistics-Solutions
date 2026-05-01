@@ -182,13 +182,13 @@ ${formData.message}
 
                 <div className="flex flex-col items-center">
                   <FaPhoneAlt className="text-red-500 text-xl sm:text-2xl mb-2" />
-                  <span className="text-xs sm:text-sm">1234 5678</span>
+                  <span className="text-xs sm:text-sm">905-715-0700</span>
                 </div>
 
                 <div className="flex flex-col items-center">
                   <FaEnvelope className="text-red-500 text-xl sm:text-2xl mb-2" />
                   <span className="text-xs sm:text-sm">
-                    info@xpertlogistics.com
+                    dispatch@expertlogisticssolutions.com
                   </span>
                 </div>
               </div>

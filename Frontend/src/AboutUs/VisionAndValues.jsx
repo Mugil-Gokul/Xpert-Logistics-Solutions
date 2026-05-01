@@ -6,7 +6,7 @@ import Stars from "../Components/Stars";
 const VisionAndValues = () => {
   return (
     <>
-      <section className="w-full bg-white py-6 sm:py-12 lg:py-8 px-4 sm:px-6 lg:px-20">
+      <section className="w-full bg-white py-6 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-20 overflow-hidden">
         <div className="max-w-7xl mx-auto space-y-10 lg:space-y-12">
 
           {/* Top Section - Vision and Values */}

@@ -29,12 +29,12 @@ const Footer = () => {
 
           <div>
             <h4 className="font-semibold mb-1">Call Us:</h4>
-            <p className="text-gray-700">Ph. No Here</p>
+            <p className="text-gray-700">905-715-0700</p>
           </div>
 
           <div>
             <h4 className="font-semibold mb-1">Email Us:</h4>
-            <p className="text-gray-700">Email Address Here</p>
+            <p className="text-gray-700">dispatch@expertlogisticssolutions.com</p>
           </div>
         </motion.div>
 
