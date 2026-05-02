@@ -174,76 +174,98 @@ const AboutMain = () => {
 
       {/* ASSET BASED */}
 
-<section className="bg-gradient-to-r from-[#1a0000] to-black text-white py-14 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+      <section className="bg-gradient-to-r from-[#1a0000] to-black text-white py-14 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+          {/* LEFT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
+              Asset-Based, Service-Focused
+            </h2>
 
-    {/* LEFT CONTENT */}
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-    >
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
-        Asset-Based, Service-Focused
-      </h2>
+            <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+              As an asset-based carrier, we maintain full control over our
+              operations ensuring consistency, reliability, and accountability.
+            </p>
+          </motion.div>
 
-      <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-        As an asset-based carrier, we maintain full control over our
-        operations ensuring consistency, reliability, and accountability.
-      </p>
-    </motion.div>
-
-    {/* RIGHT GRID */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-      {[
-        "Fleet of tractors and sprinter vans",
-        "Expedited and dedicated freight capability",
-        "Direct communication with drivers and dispatch",
-        "Flexible capacity for critical shipments",
-      ].map((item, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: i * 0.15 }}
-          viewport={{ once: true }}
-          className="group relative bg-[#6a1b1b] p-4 sm:p-5 rounded-lg sm:rounded-xl 
+          {/* RIGHT GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            {[
+              "Fleet of tractors and sprinter vans",
+              "Expedited and dedicated freight capability",
+              "Direct communication with drivers and dispatch",
+              "Flexible capacity for critical shipments",
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className="group relative bg-[#6a1b1b] p-4 sm:p-5 rounded-lg sm:rounded-xl 
                      border border-transparent hover:border-red-500 transition duration-300 overflow-hidden"
-        >
-          {/* subtle accent bar */}
-          <div className="h-1 w-6 bg-red-400 mb-3 group-hover:w-12 transition-all duration-300"></div>
+              >
+                {/* subtle accent bar */}
+                <div className="h-1 w-6 bg-red-400 mb-3 group-hover:w-12 transition-all duration-300"></div>
 
-          <p className="text-sm sm:text-base text-gray-100 leading-relaxed">
-            {item}
-          </p>
+                <p className="text-sm sm:text-base text-gray-100 leading-relaxed">
+                  {item}
+                </p>
 
-          {/* subtle glow */}
-          <div className="absolute inset-0 bg-red-500 opacity-0 group-hover:opacity-10 transition"></div>
-        </motion.div>
-      ))}
-    </div>
-
-  </div>
-</section>
+                {/* subtle glow */}
+                <div className="absolute inset-0 bg-red-500 opacity-0 group-hover:opacity-10 transition"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* TECHNOLOGY */}
-      <section className="bg-black text-white py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-10">
-            Technology & Real-Time Visibility
-          </h2>
 
-          <div className="grid md:grid-cols-4 gap-6">
+      <section className="bg-black text-white py-14 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center">
+          {/* HEADER */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-10 sm:mb-14"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+              Technology & Real-Time Visibility
+            </h2>
+          </motion.div>
+
+          {/* GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
             {[
               "Live GPS tracking on all shipments",
               "Automated status updates (pickup, transit, delivery)",
               "Proactive communication on delays or issues",
               "ELD-integrated fleet monitoring",
             ].map((item, i) => (
-              <div key={i} className="border border-red-800 p-6 rounded-lg">
-                {item}
-              </div>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className="group relative border border-red-900/60 rounded-xl p-5 sm:p-6 bg-white/5 backdrop-blur-sm
+                     hover:border-red-500 transition duration-300 overflow-hidden"
+              >
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed group-hover:text-white transition">
+                  {item}
+                </p>
+
+                {/* subtle glow effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-red-500/10 transition"></div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -252,27 +274,46 @@ const AboutMain = () => {
       <Stars />
 
       {/* REEFER */}
-      <section className=" text-black py-8 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">
-          Reefer & Temperature-Controlled Freight
-        </h2>
-        <p className="max-w-3xl mx-auto mb-10">
-          We handle temperature-sensitive freight with the same level of
-          precision and care.
-        </p>
 
-        <div className="flex flex-wrap justify-center gap-6">
+      <section className="bg-white text-black py-14 sm:py-16 md:py-20 px-4 sm:px-6 text-center overflow-hidden">
+        {/* HEADER */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-8 sm:mb-10"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+            Reefer & Temperature-Controlled Freight
+          </h2>
+
+          <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We handle temperature-sensitive freight with the same level of
+            precision and care.
+          </p>
+        </motion.div>
+
+        {/* TAGS */}
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mx-auto">
           {[
             "Produce and perishable goods",
             "Temperature-controlled transport",
             "Continuous monitoring to ensure product integrity",
           ].map((item, i) => (
-            <span
+            <motion.span
               key={i}
-              className="bg-white text-red-700 px-6 py-3 rounded-full font-medium border border-red-700 hover:bg-[#6a1b1b] hover:text-white transition"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: i * 0.15 }}
+              viewport={{ once: true }}
+              className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm md:text-base font-medium
+                   border border-red-700 text-red-700 bg-white
+                   hover:bg-gradient-to-r hover:from-[#6a1b1b] hover:to-red-700 hover:text-white
+                   transition duration-300 shadow-sm hover:shadow-md"
             >
               {item}
-            </span>
+            </motion.span>
           ))}
         </div>
       </section>
@@ -280,52 +321,77 @@ const AboutMain = () => {
       <Stars />
 
       {/* SUSTAINABILITY - Bold Branded Strip */}
-      <section className="relative bg-gradient-to-r from-[#1a0000] via-red-900 to-black text-white py-20 px-6 overflow-hidden">
-        {/* background accent */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-red-700 opacity-20 blur-3xl rounded-full"></div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <h2 className="text-4xl font-bold mb-6">
+      <section className="relative bg-gradient-to-r from-[#1a0000] via-red-900 to-black text-white py-14 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
+        {/* background accent */}
+        <div className="absolute top-0 left-0 w-48 sm:w-72 h-48 sm:h-72 bg-red-700 opacity-20 blur-3xl rounded-full"></div>
+
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
+          {/* LEFT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
               Sustainability Commitment
             </h2>
 
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
               We are a proud SmartWay Transport Partner, committed to reducing
               emissions and improving fuel efficiency through smarter routing
               and operational practices.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Right Side Highlight */}
-          <div className="bg-white text-gray-900 p-10 rounded-3xl shadow-2xl transform hover:-translate-y-2 transition">
-            <p className="text-lg font-semibold mb-4">
+          {/* RIGHT CARD */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-white text-gray-900 p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl shadow-2xl 
+                 transform hover:-translate-y-2 transition duration-300"
+          >
+            <p className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4">
               Smarter Routes. Lower Emissions.
             </p>
-            <div className="h-1 w-16 bg-red-600 mb-4"></div>
-            <p className="text-sm text-gray-600">
+
+            <div className="h-1 w-12 sm:w-16 bg-red-600 mb-3 sm:mb-4"></div>
+
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
               Optimized logistics decisions that reduce environmental impact
               while maintaining performance.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* SERVICE AREAS - Unique Directional Layout */}
-      <section className="bg-white py-10 px-6">
+
+      <section className="bg-white py-14 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          {/* HEADER */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-10 sm:mb-14 md:mb-16"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Core Service Areas
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
               High-performance cross-border routes built for speed, precision,
               and reliability.
             </p>
-          </div>
+          </motion.div>
 
-          {/* unique layout */}
-          <div className="grid md:grid-cols-3 gap-10">
+          {/* GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
             {[
               {
                 title: "Ontario ↔ Michigan / Midwest",
@@ -340,23 +406,34 @@ const AboutMain = () => {
                 desc: "JIT-critical cross-border operations",
               },
             ].map((area, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="group relative bg-gray-50 rounded-3xl p-8 overflow-hidden border hover:border-red-500 transition duration-300"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className="group relative bg-gray-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 overflow-hidden border border-gray-200 hover:border-red-500 transition duration-300"
               >
                 {/* diagonal accent */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-red-600 transform rotate-45 translate-x-10 -translate-y-10 opacity-20 group-hover:opacity-40 transition"></div>
+                <div
+                  className="absolute top-0 right-0 w-20 sm:w-24 h-20 sm:h-24 bg-red-600 
+                          transform rotate-45 translate-x-8 sm:translate-x-10 
+                          -translate-y-8 sm:-translate-y-10 
+                          opacity-20 group-hover:opacity-40 transition"
+                ></div>
 
                 {/* content */}
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-red-600 transition">
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-red-600 transition">
                   {area.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm">{area.desc}</p>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  {area.desc}
+                </p>
 
-                {/* bottom line animation */}
-                <div className="mt-6 h-[2px] w-10 bg-red-600 group-hover:w-20 transition-all duration-300"></div>
-              </div>
+                {/* bottom line */}
+                <div className="mt-4 sm:mt-6 h-[2px] w-8 sm:w-10 bg-red-600 group-hover:w-16 sm:group-hover:w-20 transition-all duration-300"></div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -365,25 +442,57 @@ const AboutMain = () => {
       <Stars />
 
       {/* WHY US */}
-      <section className="bg-gradient-to-r from-red-800 to-black text-white py-24 px-6 text-center">
-        <h2 className="text-4xl font-bold mb-12">
-          Why Xpert Logistics Solutions
-        </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            "Experienced, hands-on leadership",
-            "Proven performance in high-pressure environments",
-            "Automotive and JIT specialization",
-            "Cross-border expertise",
-            "Reliable, asset-based operations",
-          ].map((item, i) => (
-            <div key={i} className="bg-white/10 p-6 rounded-xl backdrop-blur">
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
+<section className="bg-gradient-to-r from-red-800 to-black text-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 text-center overflow-hidden">
+  
+  <div className="max-w-6xl mx-auto">
+
+    {/* HEADER */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="mb-10 sm:mb-12"
+    >
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+        Why Xpert Logistics Solutions
+      </h2>
+    </motion.div>
+
+    {/* GRID */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
+      {[
+        "Experienced, hands-on leadership",
+        "Proven performance in high-pressure environments",
+        "Automotive and JIT specialization",
+        "Cross-border expertise",
+        "Reliable, asset-based operations",
+      ].map((item, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: i * 0.12 }}
+          viewport={{ once: true }}
+          className="group relative bg-white/10 backdrop-blur-md p-5 sm:p-6 rounded-lg sm:rounded-xl 
+                     border border-white/10 hover:border-red-400 transition duration-300 overflow-hidden"
+        >
+          {/* subtle accent */}
+
+          <p className="text-sm sm:text-base text-gray-100 leading-relaxed">
+            {item}
+          </p>
+
+          {/* glow effect */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-red-500/10 transition"></div>
+        </motion.div>
+      ))}
+    </div>
+
+  </div>
+
+</section>
     </div>
   );
 };

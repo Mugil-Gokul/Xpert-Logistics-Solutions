@@ -2,100 +2,90 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const OurTeam = () => {
-  const teamMembers = [
-    {
-      name: "John Doe",
-      designation: "Operations Manager",
-      img: "https://via.placeholder.com/150",
-    },
-    {
-      name: "Jane Smith",
-      designation: "Supply Chain Specialist",
-      img: "https://via.placeholder.com/150",
-    },
-    {
-      name: "Michael Johnson",
-      designation: "Logistics Coordinator",
-      img: "https://via.placeholder.com/150",
-    },
-  ];
-
   return (
-    <section className="w-full bg-[#620504] py-12 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-20 text-white mt-10">
-      {/* Section Intro */}
-      <div className="max-w-7xl mx-auto text-center mb-10 sm:mb-12">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide mb-4">
-          Our Management & Expert Team
-        </h2>
+    <section className="relative w-full bg-black py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-20 overflow-hidden mt-10 text-white">
 
-        <p className="max-w-3xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1a0000] via-[#620504] to-black"></div>
+
+      {/* NETWORK SVG (responsive safe) */}
+      <svg
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        className="absolute inset-0 w-full h-full opacity-10 sm:opacity-20"
+      >
+        <motion.line
+          x1="10" y1="30" x2="90" y2="70"
+          stroke="#ff4d4d"
+          strokeWidth="0.5"
+          initial={{ pathLength: 0 }}
+          whileInView={{ pathLength: 1 }}
+          transition={{ duration: 1 }}
+        />
+        <motion.line
+          x1="20" y1="80" x2="80" y2="20"
+          stroke="#ff4d4d"
+          strokeWidth="0.5"
+          initial={{ pathLength: 0 }}
+          whileInView={{ pathLength: 1 }}
+          transition={{ duration: 1.2 }}
+        />
+      </svg>
+
+      {/* CONTENT */}
+      <div className="relative max-w-4xl mx-auto text-center z-10">
+
+        {/* Top Nodes */}
+        <div className="flex justify-center gap-4 sm:gap-6 mb-8 sm:mb-10">
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={i}
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ delay: i * 0.2 }}
+              className="w-3 h-3 sm:w-4 sm:h-4 bg-red-500 rounded-full shadow-[0_0_12px_rgba(255,0,0,0.7)]"
+            />
+          ))}
+        </div>
+
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight"
+        >
+          Our Management & Expert Team
+        </motion.h2>
+
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed"
+        >
           Our success is driven by the power of collaboration. Xpert Logistics is powered by a
           world-class team of experts who work together seamlessly to solve complex
           logistics challenges and deliver innovative solutions faster.
-        </p>
+        </motion.p>
+
       </div>
 
-      {/* Team Members Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-        {teamMembers.map((member, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.15 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center"
-          >
-            {/* Circular Image */}
-            <img
-              src={member.img}
-              alt={member.name}
-              className="w-36 h-36 sm:w-44 sm:h-44 lg:w-52 lg:h-52 rounded-full object-cover shadow-lg border-2 border-white"
-            />
+      {/* Floating Nodes (responsive positions) */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="absolute top-10 sm:top-20 left-4 sm:left-10 w-2 h-2 sm:w-3 sm:h-3 bg-red-600 rounded-full shadow-md"
+      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+        className="absolute bottom-10 sm:bottom-20 right-4 sm:right-10 w-2 h-2 sm:w-3 sm:h-3 bg-red-600 rounded-full shadow-md"
+      />
 
-            {/* Name & Designation */}
-            <div className="mt-4 bg-white text-gray-800 rounded-md shadow-md px-4 py-3 w-full max-w-xs text-center">
-              <p className="font-semibold text-base sm:text-lg">{member.name}</p>
-              <p className="text-xs sm:text-sm text-gray-600">
-                {member.designation}
-              </p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Leadership Team */}
-      <div className="max-w-7xl mx-auto text-center mt-14 sm:mt-16">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide mb-8">
-          Leadership Team
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.15 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center"
-            >
-              <img
-                src={member.img}
-                alt={member.name}
-                className="w-36 h-36 sm:w-44 sm:h-44 lg:w-52 lg:h-52 rounded-full object-cover shadow-lg border-2 border-white"
-              />
-
-              <div className="mt-4 bg-white text-gray-800 rounded-md shadow-md px-4 py-3 w-full max-w-xs text-center">
-                <p className="font-semibold text-base sm:text-lg">{member.name}</p>
-                <p className="text-xs sm:text-sm text-gray-600">
-                  {member.designation}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 };

@@ -14,7 +14,7 @@ const AboutUs = () => {
     <WhoWeAre/>
     <AboutMain/>
     <VisionAndValues/>
-    <ChairmanMessage/>
+    {/* <ChairmanMessage/> */}
     <AwardsAndCertification/>
     <OurTeam/>
     </>

@@ -13,8 +13,7 @@ const WhoWeAre = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#620504] mb-4 sm:mb-6"
-          >
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8">
             Who we are
           </motion.h2>
 

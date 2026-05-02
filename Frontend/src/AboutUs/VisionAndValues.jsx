@@ -59,7 +59,7 @@ const VisionAndValues = () => {
           </div>
 
           {/* Bottom Section - Metrics Banner */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -84,7 +84,7 @@ const VisionAndValues = () => {
               <p className="text-xs sm:text-sm">Team Size</p>
             </div>
 
-          </motion.div>
+          </motion.div> */}
 
         </div>
       </section>
