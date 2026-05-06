@@ -443,56 +443,52 @@ const AboutMain = () => {
 
       {/* WHY US */}
 
-<section className="bg-gradient-to-r from-red-800 to-black text-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 text-center overflow-hidden">
-  
-  <div className="max-w-6xl mx-auto">
+      <section className="bg-gradient-to-r from-red-800 to-black text-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 text-center overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          {/* HEADER */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-10 sm:mb-12"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+              Why Xpert Logistics Solutions
+            </h2>
+          </motion.div>
 
-    {/* HEADER */}
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="mb-10 sm:mb-12"
-    >
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-        Why Xpert Logistics Solutions
-      </h2>
-    </motion.div>
-
-    {/* GRID */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
-      {[
-        "Experienced, hands-on leadership",
-        "Proven performance in high-pressure environments",
-        "Automotive and JIT specialization",
-        "Cross-border expertise",
-        "Reliable, asset-based operations",
-      ].map((item, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: i * 0.12 }}
-          viewport={{ once: true }}
-          className="group relative bg-white/10 backdrop-blur-md p-5 sm:p-6 rounded-lg sm:rounded-xl 
+          {/* GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
+            {[
+              "Experienced, hands-on leadership",
+              "Proven performance in high-pressure environments",
+              "Automotive and JIT specialization",
+              "Cross-border expertise",
+              "Reliable, asset-based operations",
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.12 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/10 backdrop-blur-md p-5 sm:p-6 rounded-lg sm:rounded-xl 
                      border border-white/10 hover:border-red-400 transition duration-300 overflow-hidden"
-        >
-          {/* subtle accent */}
+              >
+                {/* subtle accent */}
 
-          <p className="text-sm sm:text-base text-gray-100 leading-relaxed">
-            {item}
-          </p>
+                <p className="text-sm sm:text-base text-gray-100 leading-relaxed">
+                  {item}
+                </p>
 
-          {/* glow effect */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-red-500/10 transition"></div>
-        </motion.div>
-      ))}
-    </div>
-
-  </div>
-
-</section>
+                {/* glow effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-red-500/10 transition"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import WhatWeOffer from "./WhatWeOffer";
 import HomeChooseUs from "./HomeChooseUs";
 import HomeTestimonials from "./HomeTestimonials";
 import HomeCareer from "./HomeCareer";
+import HomeAutomotiveAssetTech from "./HomeAutomotiveAssetTech";
 
 const Home = () => {
   return (
@@ -42,6 +43,7 @@ const Home = () => {
         <HomeAboutUs />
         <WhatWeOffer />
         <HomeChooseUs />
+        <HomeAutomotiveAssetTech/>
         <HomeTestimonials />
         <HomeCareer />
       </div>

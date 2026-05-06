@@ -21,21 +21,17 @@ const HomeHero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl lg:max-w-5xl"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Precision <span className="text-[#620504]">Freight.</span> <br />
-            Unmatched <span className="text-[#620504]">Expertise.</span>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6">
+            We don’t just manage <span className="text-[#620504]">Freight.</span> <br />
+            we protect supply chains and <span className="text-[#620504]">production lines.</span>
+            {/* We don’t just manage freight — we protect supply chains and production lines.” */}
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg mb-6 leading-relaxed">
-            Delivering industry-leading logistics solutions across Ontario and
-            throughout North America. From full truckload shipments to
-            time-critical expedited deliveries, Xpert Logistics Solutions is the
-            freight partner businesses trust when reliability is non-negotiable.
+            At Xpert Logistics Solutions, leadership is not behind the desk — it is directly involved in operations. Our company is led by industry professionals with proven experience managing high-volume, time-sensitive freight for major automotive OEMs across North America.
             <br />
             <br />
-            Whether you’re shipping across Ontario or coast to coast, our
-            experienced team, modern fleet, and real-time tracking technology
-            ensure your cargo arrives safely, on time, every time.
+            We understand that in today’s supply chain, every shipment matters and every delay has a cost. That’s why our operations are built around precision, accountability, and proactive communication.
           </p>
 
           <Link to="/services" className="inline-block">
